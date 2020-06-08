@@ -13,20 +13,25 @@ const lang = {
     email: 'Email',
     phone: 'Phone',
     skills: 'Skills',
-    about_message: 'awesome message',
+    used_use: 'I used to use',
+    about_message:
+      "Hello, my name is Miguel and it's a pleasure to greet you, I've been in the world of programming for about 4 years. I started in university where I studied mechanical engineering, basic programming was in the curriculum, I liked it so much that I decided to continue learning on my own reading books, magazines, blogs, taking courses on various online education platforms and doing my own projects. Professionally, I have been working for 3 years where I have worked in several renowned applications both nationally and internationally, I have worked for agencies and also independently. Not all my hobbies are based solely on programming, I am also interested in science, physics, mechanics, industrial automation, arts and music. In short I am curious by nature that is the great virtue that God gave me.",
     frontend_develop: 'FRONTEND DEVELOP',
-    frontend_develop_msj: 'Hago que tu página se vea cool en el navegador :)',
+    frontend_develop_msj: 'I make your page look cool in the browser :)',
     backend_develop: 'BACKEND DEVELOP',
     backend_develop_msj:
-      'Desarrollo la funcionalidad de tu página para que haga cosas asombrosas!',
+      'Develop the functionality of your page to do amazing things!',
     responsive: 'WEB RESPONSIVE DEVELOP',
-    responsive_msj: 'Tu página se verá genial en teléfonos también.',
+    responsive_msj: 'Your page will look great on phones as well.',
     label_develop: 'en desarrollo',
     label_end: 'Finalizado',
     label_learning: 'Periodo de aprendizaje',
     find_me: 'Find Me',
     find_me_msj:
-      'Puedes conseguirme por mis redes sociales, ¡escríbeme para saber más!',
+      'You can find me through my social media, write me to know more!',
+    cite:
+      '"My north will always be a clean and excellent work, together with values of responsibility, commitment and dedication the result will always be the satisfaction of my clients"',
+    use_tech: 'Tech i used here:',
   },
   spanish: {
     tittle: 'Portafolio',
@@ -40,8 +45,9 @@ const lang = {
     email: 'Correo',
     phone: 'Telefono',
     skills: 'Habilidades',
+    used_use: 'Herramientas que suelo usar',
     about_message:
-      'Soy una persona interesada por la ciencia y la tecnología con facilidad de aprender de manera autodidacta. Estudio ingeniería mecánica, pero me he enfocado más al área de computación y programación, mis estudios universitarios me han facilitado comprender y resolver problemas complejos de forma sencilla. Siempre en busca de nuevos retos y cosas interesantes que aprender.Me considero una persona altamente calificada para aportar soluciones a problemas de diferente índole puesto que en el transcurso de mi vida me he desarrollado de manera profesional en diferentes áreas, tanto en el área industrial como tecnológica y docente.',
+      'Hola, me llamo miguel y es un gusto saludarte, llevo aproximadamente en el mundo de la programación 4 años. Comencé en la universidad donde estudie ingeniería mecánica, programación básica estaba en el pensum de estudio, Me gusto tanto que decidí seguir aprendiendo por mi cuenta leyendo libros, revistas, blogs, haciendo cursos en diversas plataformas de educación online y realizando proyectos propios. Profesionalmente ya tengo 3 anos laborando donde he trabajos en varias aplicaciones de renombre tanto a nivel nacional como internacional, he trabajado para agencias y también de manera independiente. No todos mis gustos se basan solo en programar, también tengo interés en la ciencia, la física, mecánica, automatización industrial artes y musica. En resumen soy curioso por naturaleza esa es la gran virtud que dios me dio.',
     frontend_develop: 'DESARROLLO FRONTEND',
     frontend_develop_msj: 'Hago que tu página se vea cool en el navegador :)',
     backend_develop: 'DESARROLLO BACKEND',
@@ -50,10 +56,13 @@ const lang = {
     responsive: 'DISEÑO WEB RESPONSIVO',
     responsive_msj: 'Tu página se verá genial en teléfonos también.',
     label_develop: 'en desarrollo',
+    label_end: 'Finalizado',
+    label_learning: 'Periodo de aprendizaje',
+    find_me: 'Encuéntrame',
+    find_me_msj:
+      'Puedes conseguirme por mis redes sociales, ¡escríbeme para saber más!',
+    cite:
+      '"Mi norte siempre será un trabajo limpio y de excelencia, junto con valores de responsabilidad, compromiso y dedicación el resultado siempre será la satisfacción de mis clientes"',
+    use_tech: 'Tecnologias Utilizadas:',
   },
-  label_end: 'Finalizado',
-  label_learning: 'Periodo de aprendizaje',
-  find_me: 'Encuéntrame',
-  find_me_msj:
-    'Puedes conseguirme por mis redes sociales, ¡escríbeme para saber más!',
 };

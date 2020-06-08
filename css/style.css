@@ -8,6 +8,7 @@
 /*======================================
 //--//-->   STYLES GENERALES
 ======================================*/
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
 body {
   background-color: #f5f5f5;
@@ -346,6 +347,10 @@ a:hover {
 }
 
 /* Prelaoder */
+
+#home {
+  background-image: url(../img/presentacion.jpg);
+}
 
 #preloader {
   position: fixed;
@@ -1323,6 +1328,12 @@ input:checked + .slider:before {
   }
 }
 
+@media (max-width: 550px) {
+  #home {
+    background-image: url(../img/presentacion2.jpg);
+  }
+}
+
 @media (max-width: 1024px) {
   .bg-image {
     background-attachment: scroll;
@@ -1336,8 +1347,83 @@ input:checked + .slider:before {
   color: black;
 }
 
+.icon-check {
+  height: 25px;
+  width: 25px;
+  font-size: 1rem;
+  border-radius: 50%;
+  line-height: 1.55;
+  margin-right: 10px;
+  text-align: center;
+  box-shadow: 0 0 0 3px #0078ff;
+  display: block;
+}
+.hability-content > h4 {
+  margin: 0 !important;
+}
+
+.hability-content {
+  display: flex;
+  align-items: center;
+  margin-top: 28px;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.tech img {
+  width: 50px;
+  height: 50px;
+}
+
+.top-content-secction {
+  display: flex;
+  padding: 0 3rem !important;
+}
+
+.top-content-secction > * {
+  padding: 1rem !important;
+}
+
+.top-content-secction img {
+  border-radius: 150px;
+  width: 50px;
+  /* height: 50px; */
+}
+
+.top-content-text {
+  align-self: center;
+}
+
+.section-line {
+  width: 20%;
+  height: 3px;
+  background: #0078ff;
+  margin: 1rem 0 0.3rem 0 !important;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.cita {
+  font-family: "Indie Flower", cursive;
+  font-size: 1.5rem;
+}
+
 @media (max-width: 768px) {
   .back-to-top {
     bottom: 15px;
+  }
+
+  .top-content-secction img {
+    margin: 0 auto;
+    border-radius: 150px;
+    width: 50%;
+    /* height: 50px; */
   }
 }

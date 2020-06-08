@@ -7,6 +7,14 @@
   let english = lang.english;
   let spanish = lang.spanish;
 
+  $(document).ready(function () {
+    setTimeout(() => {
+      $('#pop-up').modal('show');
+    }, 1000);
+
+    console.log('ready!');
+  });
+
   $('#lang').on('change', function () {
     if ($('#lang')[0].checked) {
       setLanguaje('spanish');
@@ -171,5 +179,9 @@
     $('#portafolio2').text(languaje.portfolio);
     $('#encuentrame').text(languaje.find_me);
     $('#encuentrame_msj').text(languaje.find_me_msj);
+    $('#cita').text(languaje.cite);
+    $('#suelo_usar').text(languaje.used_use);
+    $('#portafolio2').text(languaje.portfolio);
+    $('.use_tech').text(languaje.use_tech);
   }
 })(jQuery);
