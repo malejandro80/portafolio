@@ -1332,6 +1332,10 @@ input:checked + .slider:before {
   #home {
     background-image: url(../img/presentacion2.jpg);
   }
+
+  .top-content-secction img {
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 1024px) {
