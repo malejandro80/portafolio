@@ -31,7 +31,7 @@ const lang = {
       'Follow me on my social media or write to me to find out more, I will be happy to answer you.',
     cite:
       '"My north will always be a clean and excellent work, together with values of responsibility, commitment and dedication the result will always be the satisfaction of my clients"',
-    use_tech: 'Tech i used here:',
+    use_tech: 'Tech I used here:',
   },
   spanish: {
     tittle: 'Portafolio',
