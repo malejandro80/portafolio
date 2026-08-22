@@ -1,13 +1,22 @@
-/* Premium Modern Redesign - Refined Light Mode */
+/**
+ * Premium Modern Redesign - Refined Light Mode
+ *
+ * @format
+ */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800;900&display=swap');
 
 :root {
   --bg-dark: #f8fafc;
   --bg-surface: #ffffff;
   --bg-surface-hover: #f1f5f9;
-  --accent-primary: #046BD2;
-  --accent-secondary: #26B7CD;
-  --accent-gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  --accent-primary: #046bd2;
+  --accent-secondary: #26b7cd;
+  --accent-gradient: linear-gradient(
+    135deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
   --accent-gradient-hover: linear-gradient(135deg, #0558aa, #1f98aa);
   --text-main: #0f172a;
   --text-muted: #64748b;
@@ -27,10 +36,13 @@ body {
 
 /* Background Grid Pattern */
 body::before {
-  content: "";
+  content: '';
   position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
-  background-image: 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image:
     linear-gradient(rgba(4, 107, 210, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(4, 107, 210, 0.03) 1px, transparent 1px);
   background-size: 30px 30px;
@@ -38,7 +50,15 @@ body::before {
   pointer-events: none;
 }
 
-h1, h2, h3, h4, h5, h6, .title-left, .title-a, .w-title {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title-left,
+.title-a,
+.w-title {
   font-family: var(--font-heading) !important;
   font-weight: 800 !important;
   color: var(--text-main) !important;
@@ -46,7 +66,9 @@ h1, h2, h3, h4, h5, h6, .title-left, .title-a, .w-title {
 }
 
 /* Override existing backgrounds */
-.bg-white, section.bg-white, section {
+.bg-white,
+section.bg-white,
+section {
   background-color: transparent !important;
 }
 
@@ -56,7 +78,7 @@ h1, h2, h3, h4, h5, h6, .title-left, .title-a, .w-title {
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: var(--glass-border-darker);
-  box-shadow: 0 4px 30px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   padding: 15px 0;
 }
@@ -76,25 +98,9 @@ h1, h2, h3, h4, h5, h6, .title-left, .title-a, .w-title {
   transition: color 0.3s ease;
 }
 
-.navbar-b .nav-link:hover, .navbar-b .nav-link.active {
+.navbar-b .nav-link:hover,
+.navbar-b .nav-link.active {
   color: var(--accent-primary) !important;
-}
-
-.navbar-b .nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 3px;
-  background: var(--accent-gradient);
-  border-radius: 3px;
-  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.navbar-b .nav-link:hover::after, .navbar-b .nav-link.active::after {
-  width: 20px;
 }
 
 .navbar-brand {
@@ -117,26 +123,34 @@ h1, h2, h3, h4, h5, h6, .title-left, .title-a, .w-title {
 
 /* Animated Orbs */
 .intro::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -10%;
   left: -5%;
   width: 50vw;
   height: 50vw;
-  background: radial-gradient(circle, rgba(38,183,205,0.15) 0%, rgba(255,255,255,0) 60%);
+  background: radial-gradient(
+    circle,
+    rgba(38, 183, 205, 0.15) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
   border-radius: 50%;
   animation: floatOrb 12s infinite alternate ease-in-out;
   z-index: -1;
   filter: blur(40px);
 }
 .intro::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0%;
   right: -5%;
   width: 45vw;
   height: 45vw;
-  background: radial-gradient(circle, rgba(4,107,210,0.12) 0%, rgba(255,255,255,0) 60%);
+  background: radial-gradient(
+    circle,
+    rgba(4, 107, 210, 0.12) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
   border-radius: 50%;
   animation: floatOrbReverse 15s infinite alternate ease-in-out;
   z-index: -1;
@@ -144,12 +158,20 @@ h1, h2, h3, h4, h5, h6, .title-left, .title-a, .w-title {
 }
 
 @keyframes floatOrb {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(100px, 50px) scale(1.1); }
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(100px, 50px) scale(1.1);
+  }
 }
 @keyframes floatOrbReverse {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(-80px, -40px) scale(1.05); }
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(-80px, -40px) scale(1.05);
+  }
 }
 
 .intro .overlay-itro {
@@ -165,7 +187,12 @@ h1, h2, h3, h4, h5, h6, .title-left, .title-a, .w-title {
 .intro-title {
   font-size: 5rem !important;
   font-weight: 900 !important;
-  background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary), var(--accent-primary));
+  background: linear-gradient(
+    to right,
+    var(--accent-primary),
+    var(--accent-secondary),
+    var(--accent-primary)
+  );
   background-size: 200% auto;
   color: #000;
   background-clip: text;
@@ -177,7 +204,9 @@ h1, h2, h3, h4, h5, h6, .title-left, .title-a, .w-title {
 }
 
 @keyframes shine {
-  to { background-position: 200% center; }
+  to {
+    background-position: 200% center;
+  }
 }
 
 .intro-subtitle {
@@ -201,16 +230,21 @@ h1, h2, h3, h4, h5, h6, .title-left, .title-a, .w-title {
   font-weight: 700 !important;
   font-size: 1.1rem !important;
   letter-spacing: 0.5px;
-  box-shadow: 0 10px 25px rgba(4, 107, 210, 0.25), inset 0 2px 0 rgba(255,255,255,0.2) !important;
+  box-shadow:
+    0 10px 25px rgba(4, 107, 210, 0.25),
+    inset 0 2px 0 rgba(255, 255, 255, 0.2) !important;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
 .btn-primary::before {
-  content: "";
+  content: '';
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: var(--accent-gradient-hover);
   z-index: -1;
   opacity: 0;
@@ -218,14 +252,18 @@ h1, h2, h3, h4, h5, h6, .title-left, .title-a, .w-title {
 }
 .btn-primary:hover {
   transform: translateY(-4px) scale(1.02) !important;
-  box-shadow: 0 15px 35px rgba(4, 107, 210, 0.35), inset 0 2px 0 rgba(255,255,255,0.2) !important;
+  box-shadow:
+    0 15px 35px rgba(4, 107, 210, 0.35),
+    inset 0 2px 0 rgba(255, 255, 255, 0.2) !important;
 }
 .btn-primary:hover::before {
   opacity: 1;
 }
 
 /* Glassmorphic Cards */
-.box-shadow-full, .service-box, .work-box {
+.box-shadow-full,
+.service-box,
+.work-box {
   background: rgba(255, 255, 255, 0.7) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -242,7 +280,9 @@ h1, h2, h3, h4, h5, h6, .title-left, .title-a, .w-title {
   padding: 0 !important;
 }
 
-.box-shadow-full:hover, .service-box:hover, .work-box:hover {
+.box-shadow-full:hover,
+.service-box:hover,
+.work-box:hover {
   transform: translateY(-10px);
   box-shadow: 0 30px 60px -15px rgba(4, 107, 210, 0.12);
   background: rgba(255, 255, 255, 0.95) !important;
@@ -292,8 +332,8 @@ h1, h2, h3, h4, h5, h6, .title-left, .title-a, .w-title {
 
 .about-img img {
   border-radius: 28px;
-  border: 8px solid rgba(255,255,255,0.5);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border: 8px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
   transition: transform 0.4s ease;
 }
 .about-img img:hover {
@@ -313,8 +353,6 @@ h1, h2, h3, h4, h5, h6, .title-left, .title-a, .w-title {
   margin-right: 8px;
 }
 
-
-
 /* Portfolio & Experience Enhancements */
 .work-img {
   overflow: hidden;
@@ -329,21 +367,35 @@ h1, h2, h3, h4, h5, h6, .title-left, .title-a, .w-title {
   transform: scale(1.08);
 }
 /* Style the placeholders beautifully */
-.work-img[style*="min-height"] {
-  background: linear-gradient(135deg, rgba(4,107,210,0.05), rgba(38,183,205,0.05)) !important;
+.work-img[style*='min-height'] {
+  background: linear-gradient(
+    135deg,
+    rgba(4, 107, 210, 0.05),
+    rgba(38, 183, 205, 0.05)
+  ) !important;
   position: relative;
   overflow: hidden;
 }
-.work-img[style*="min-height"]::after {
-  content: "";
+.work-img[style*='min-height']::after {
+  content: '';
   position: absolute;
-  top: 0; left: -100%; width: 50%; height: 100%;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,0.6), transparent);
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
   transform: skewX(-20deg);
   animation: shimmer 3s infinite;
 }
 @keyframes shimmer {
-  100% { left: 200%; }
+  100% {
+    left: 200%;
+  }
 }
 .work-img span {
   font-size: 1.2rem;
