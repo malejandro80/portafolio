@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Unused template page
+Disallow: /blog-single.html
+
+# Local dependencies not meant for indexing
+Disallow: /venv/
+
+Sitemap: https://malejandro80.github.io/portafolio/sitemap.xml
