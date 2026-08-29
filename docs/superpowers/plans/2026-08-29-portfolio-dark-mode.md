@@ -255,7 +255,7 @@ In the `#navbarDefault` collapse div, immediately after the closing `</ul>` (lin
 - [ ] **Step 2: Verify placement**
 
 Run: `rg -n "theme-toggle|Material checked" index.html`
-Expected: two `theme-toggle` matches (the button `class` and its `id`) directly after the `Material checked` comment.
+Expected: two `theme-toggle` matches (the button `class` and its `id`), inserted immediately after the closing `</ul>` and before the `Material checked` comment.
 
 - [ ] **Step 3: Commit**
 
