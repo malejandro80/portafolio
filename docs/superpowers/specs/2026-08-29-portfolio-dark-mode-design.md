@@ -86,18 +86,29 @@ Everything scoped under `[data-theme="dark"]`:
 
 ### 3. Toggle button (navbar)
 
-Inside `.navbar-collapse` (`#navbarDefault`), after the closing `</ul>` (line ~126), add:
+Like the blog's `Header.astro`, the toggle lives in an always-visible `header-right` flex wrapper
+(`display: flex; align-items: center; gap: 1.25rem`) that contains the Bootstrap collapse
+(`#navbarDefault`) plus the button, inside `nav .container`. Because it is OUTSIDE the collapse it
+stays visible on every viewport (the blog keeps its toggle visible on mobile too; the portfolio's
+navbar has no toggler, so a button inside the collapse would be unreachable on small screens):
 
 ```html
-<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
-  <svg class="icon-sun" ...>...</svg>
-  <svg class="icon-moon" ...>...</svg>
-</button>
+<div class="header-right">
+  <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+    <ul class="navbar-nav">...</ul>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+    <svg class="icon-sun" ...>...</svg>
+    <svg class="icon-moon" ...>...</svg>
+  </button>
+</div>
 ```
 
 Same sun/moon SVGs as the blog's `Header.astro`.
 
 ### 4. `css/premium.css` — `.theme-toggle` base styles
+
+`.header-right { display: flex; align-items: center; gap: 1.25rem }` (matches the blog's header spacing).
 
 Pill button `2.25rem`, `background: var(--bg-surface-hover)`, `border: 1px solid var(--glass-border)`,
 color `var(--text-main)`, hover accent, `:focus-visible` ring, `.icon-moon` hidden by default and
