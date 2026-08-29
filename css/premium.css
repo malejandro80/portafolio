@@ -554,6 +554,11 @@ p.lead {
 }
 
 /* Theme toggle button (both themes) */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
 .theme-toggle {
   display: flex;
   align-items: center;
@@ -561,7 +566,6 @@ p.lead {
   width: 2.25rem;
   height: 2.25rem;
   padding: 0;
-  margin-left: 1.25rem;
   background: var(--bg-surface-hover);
   border: 1px solid var(--glass-border-darker);
   border-radius: 999px;
