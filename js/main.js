@@ -211,5 +211,6 @@
   btn.addEventListener('click', function () {
     var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
     setTheme(next);
+    (window.dataLayer = window.dataLayer || []).push({ event: 'theme_change', theme: next });
   });
 })();

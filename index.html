@@ -4,15 +4,20 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGW994MSKT"></script>
+  <!-- Google Tag Manager -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-XGW994MSKT');
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MQ8M3STF');
   </script>
+  <!-- End Google Tag Manager -->
 
   <meta charset="utf-8" />
   <script>
@@ -101,6 +106,9 @@
 </head>
 
 <body id="page-top">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ8M3STF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <!--/ Nav Star /-->
   <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
     <div class="container">
@@ -138,14 +146,10 @@
             </li>
           </ul>
         </div>
-        <button
-          class="theme-toggle"
-          id="theme-toggle"
-          type="button"
-          aria-label="Toggle theme"
-          aria-pressed="false"
-        >
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -156,7 +160,9 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
@@ -179,8 +185,8 @@
               Enthusiast</span><strong class="text-slider"></strong>
           </p>
           <p class="pt-3">
-            <a class="btn btn-outline-accent px-4 ml-2" href="curriculo-miguel-e-2026.pdf" target="_blank"
-              role="button" onclick="gtag('event', 'cv_download');">Download CV</a>
+            <a class="btn btn-outline-accent px-4 ml-2" href="curriculo-miguel-e-2026.pdf" target="_blank" role="button"
+              onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({event: 'cv_download'});">Download CV</a>
             <a onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'"
               class="btn btn-primary btn px-4"
               style="background: var(--accent-gradient); border: none; padding: 12px 30px; border-radius: 30px; font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; box-shadow: 0 5px 15px rgba(4,107,210,0.3); transition: transform 0.3s ease;"
@@ -203,21 +209,22 @@
                 <div class="row">
                   <div class="col-sm-6 col-md-5">
                     <div class="about-img">
-                      <img src="img/foto.jpg" class="img-fluid rounded b-shadow-a" alt="Miguel Bastidas, Full Stack Developer" />
+                      <img src="img/foto.jpg" class="img-fluid rounded b-shadow-a"
+                        alt="Miguel Bastidas, Full Stack Developer" />
                     </div>
                   </div>
                   <div class="col-sm-6 col-md-7">
                     <div class="about-info">
                       <p>
-                        <span class="title-s" id="etiqueta1">Name: </span>
+
                         <span>Miguel Bastidas</span>
                       </p>
                       <p>
-                        <span class="title-s" id="etiqueta2">Profile: </span>
-                        <span>Team Lead / Software Developer</span>
+
+                        <span>Tech Lead / Software Developer</span>
                       </p>
                       <p>
-                        <span class="title-s" id="etiqueta3">Email: </span>
+
                         <span>m.alejandrobp.80@gmail.com</span>
                       </p>
                     </div>
@@ -424,19 +431,19 @@
                       Azure Cloud.
                     </p>
                     <p class="use_tech">Tech I used here:</p>
-                        <ul>
-                          <li>React Native</li>
-                          <li>Next.js</li>
-                          <li>NestJS</li>
-                          <li>Azure Cloud</li>
-                          <li>React JS</li>
-                          <li>TypeScript</li>
-                          <li>Node JS</li>
-                          <li>Azure Cloud</li>
-                          <li>Claude code Assistant</li>
+                    <ul>
+                      <li>React Native</li>
+                      <li>Next.js</li>
+                      <li>NestJS</li>
+                      <li>Azure Cloud</li>
+                      <li>React JS</li>
+                      <li>TypeScript</li>
+                      <li>Node JS</li>
+                      <li>Azure Cloud</li>
+                      <li>Claude code Assistant</li>
 
 
-                        </ul>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -461,13 +468,13 @@
                       JavaScript, and Azure Cloud.
                     </p>
                     <p class="use_tech">Tech I used here:</p>
-                        <ul>
-                          <li>Next.js</li>
-                          <li>JavaScript</li>
-                          <li>TypeScript</li>
-                          <li>Azure Cloud</li>
+                    <ul>
+                      <li>Next.js</li>
+                      <li>JavaScript</li>
+                      <li>TypeScript</li>
+                      <li>Azure Cloud</li>
 
-                        </ul>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -491,15 +498,15 @@
                       with autism through technology. Enhanced application architecture significantly.
                     </p>
                     <p class="use_tech">Tech I used here:</p>
-                        <ul>
-                          <li>Frontend Architecture</li>
-                          <li>React</li>
-                          <li>Typescript</li>
-                          <li>AWS Cloud</li>
-                          <li>Node JS</li>
-                          <li>Nest JS</li>
-                          <li>Next JS</li>
-                        </ul>
+                    <ul>
+                      <li>Frontend Architecture</li>
+                      <li>React</li>
+                      <li>Typescript</li>
+                      <li>AWS Cloud</li>
+                      <li>Node JS</li>
+                      <li>Nest JS</li>
+                      <li>Next JS</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -523,14 +530,14 @@
                       application using a serverless architecture, achieving exceptional performance.
                     </p>
                     <p class="use_tech">Tech I used here:</p>
-                        <ul>
-                          <li>Serverless</li>
-                          <li>Frontend Architecture</li>
-                          <li>React JS</li>
-                          <li>TypeScript</li>
-                          <li>Laravel</li>
-                          <li>AWS Cloud</li>
-                        </ul>
+                    <ul>
+                      <li>Serverless</li>
+                      <li>Frontend Architecture</li>
+                      <li>React JS</li>
+                      <li>TypeScript</li>
+                      <li>Laravel</li>
+                      <li>AWS Cloud</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -553,17 +560,17 @@
                       working with a microservices-based architecture.
                     </p>
                     <p class="use_tech">Tech I used here:</p>
-                        <ul>
-                          <li>Angular</li>
-                          <li>React</li>
-                          <li>Redux</li>
-                          <li>JavaScript</li>
-                          <li>GIT</li>
-                          <li>Node</li>
-                          <li>Express</li>
-                          <li>AWS</li>
-                          <li>Serverless</li>
-                        </ul>
+                    <ul>
+                      <li>Angular</li>
+                      <li>React</li>
+                      <li>Redux</li>
+                      <li>JavaScript</li>
+                      <li>GIT</li>
+                      <li>Node</li>
+                      <li>Express</li>
+                      <li>AWS</li>
+                      <li>Serverless</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -574,7 +581,8 @@
           <div class="work-box">
             <a href="img/bace.png" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/bace.png" alt="BACE Investment - real estate investment platform project" class="img-fluid" />
+                <img src="img/bace.png" alt="BACE Investment - real estate investment platform project"
+                  class="img-fluid" />
               </div>
               <div class="work-content">
                 <div class="row">
@@ -586,17 +594,17 @@
                       Angular frontend with a secure Node/Express backend and MySQL data architecture.
                     </p>
                     <p class="use_tech">Tech I used here:</p>
-                        <ul>
-                          <li>Angular</li>
-                          <li>SASS</li>
-                          <li>AJAX</li>
-                          <li>JavaScript</li>
-                          <li>GIT</li>
-                          <li>Node</li>
-                          <li>Express</li>
-                          <li>Mysql</li>
-                          <li>API</li>
-                        </ul>
+                    <ul>
+                      <li>Angular</li>
+                      <li>SASS</li>
+                      <li>AJAX</li>
+                      <li>JavaScript</li>
+                      <li>GIT</li>
+                      <li>Node</li>
+                      <li>Express</li>
+                      <li>Mysql</li>
+                      <li>API</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -619,12 +627,12 @@
                       responsive design, SEO optimization, and an elegant user interface to drive client conversions.
                     </p>
                     <p class="use_tech">Tech I used here:</p>
-                        <ul>
-                          <li>HTML</li>
-                          <li>CSS</li>
-                          <li>Vanilla Javascript</li>
-                          <li>Hubspot CMS</li>
-                        </ul>
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>Vanilla Javascript</li>
+                      <li>Hubspot CMS</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -635,7 +643,8 @@
           <div class="work-box">
             <a href="img/tesis-uc.png" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/tesis-uc.png" alt="University thesis - full-stack academic platform project" class="img-fluid" />
+                <img src="img/tesis-uc.png" alt="University thesis - full-stack academic platform project"
+                  class="img-fluid" />
               </div>
               <div class="work-content">
                 <div class="row">
@@ -647,18 +656,18 @@
                       with Angular and Node.js, establishing a strong foundation in modern web architectures.
                     </p>
                     <p class="use_tech">Tech I used here:</p>
-                        <ul>
-                          <li>Angular</li>
-                          <li>SASS</li>
-                          <li>AJAX</li>
-                          <li>JavaScript</li>
-                          <li>GIT</li>
-                          <li>Bootstrap</li>
-                          <li>Node</li>
-                          <li>Express</li>
-                          <li>Mysql</li>
-                          <li>API</li>
-                        </ul>
+                    <ul>
+                      <li>Angular</li>
+                      <li>SASS</li>
+                      <li>AJAX</li>
+                      <li>JavaScript</li>
+                      <li>GIT</li>
+                      <li>Bootstrap</li>
+                      <li>Node</li>
+                      <li>Express</li>
+                      <li>Mysql</li>
+                      <li>API</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -681,17 +690,17 @@
                       operations across more than 12 airports nationwide in Venezuela.
                     </p>
                     <p class="use_tech">Tech I used here:</p>
-                        <ul>
-                          <li>PHP</li>
-                          <li>Javascript</li>
-                          <li>Jquery</li>
-                          <li>GIT</li>
-                          <li>Bootstrap</li>
-                          <li>Codeigniter</li>
-                          <li>Laravel</li>
-                          <li>Mysql</li>
-                          <li>API</li>
-                        </ul>
+                    <ul>
+                      <li>PHP</li>
+                      <li>Javascript</li>
+                      <li>Jquery</li>
+                      <li>GIT</li>
+                      <li>Bootstrap</li>
+                      <li>Codeigniter</li>
+                      <li>Laravel</li>
+                      <li>Mysql</li>
+                      <li>API</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -702,7 +711,8 @@
           <div class="work-box">
             <a href="img/viajando.jpg" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/viajando.jpg" alt="VIA/JANDO - travel and tourism landing page project" class="img-fluid" />
+                <img src="img/viajando.jpg" alt="VIA/JANDO - travel and tourism landing page project"
+                  class="img-fluid" />
               </div>
               <div class="work-content">
                 <div class="row">
@@ -714,11 +724,11 @@
                       Bootstrap and custom CSS to deliver a seamless user experience across all devices.
                     </p>
                     <p class="use_tech">Tech I used here:</p>
-                        <ul>
-                          <li>HTML</li>
-                          <li>CSS</li>
-                          <li>Bootstrap</li>
-                        </ul>
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>Bootstrap</li>
+                    </ul>
                   </div>
                 </div>
               </div>
