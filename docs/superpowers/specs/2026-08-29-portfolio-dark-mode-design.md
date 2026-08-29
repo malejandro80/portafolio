@@ -52,9 +52,10 @@ Everything scoped under `[data-theme="dark"]`:
   `box-shadow: 0 4px 30px rgba(0,0,0,0.3)`; `.navbar-b.navbar-reduce` → `rgba(15,23,42,0.9)`.
 - `.box-shadow-full, .service-box, .work-box` → `background: rgba(30,41,59,0.85)`, `border: var(--glass-border)`,
   `box-shadow: var(--glass-shadow)`; `:hover` → `rgba(30,41,59,0.96)`, shadow `rgba(0,0,0,0.5)`.
-- `.quote-card` (inline `index.html` style `#255`) → `background: rgba(30,41,59,0.95) !important`,
-  `border: 1px solid rgba(255,255,255,0.06) !important` (needs `!important` to beat the inline style).
-- Quote avatar (`index.html` `#264`, inline `border: 6px solid #fff`) → `border-color: var(--bg-surface) !important`.
+- `.quote-card` (inline `index.html` style `#255`) uses a hardcoded `background: rgba(255,255,255,0.95) !important`.
+  An inline `!important` cannot be overridden by any stylesheet rule, so `index.html` is edited to replace the
+  hardcoded white with a variable: `background: var(--bg-surface) !important` (value identical in light mode).
+- Quote avatar (`index.html` `#264`, inline `border: 6px solid #fff`) → `border: 6px solid var(--bg-surface)`.
 - `.about-img img` → `border: 8px solid rgba(255,255,255,0.1)`, `box-shadow: 0 20px 40px rgba(0,0,0,0.35)`.
 - `.work-img[style*='min-height']::after` shimmer → `rgba(255,255,255,0.08)`.
 - Scrollbar → track `var(--bg-dark)`, thumb `#334155` (hover `var(--accent-primary)`).
@@ -78,6 +79,10 @@ Everything scoped under `[data-theme="dark"]`:
 ```
 
 - Add `<link href="css/theme-dark.css" rel="stylesheet" />` after `css/premium.css` (line ~81).
+- Change `<meta name="theme-color" content="#046bd2" />` to `content="#f8fafc"` (the script syncs it at
+  runtime to `#f8fafc` / `#0f172a`).
+- Swap the two hardcoded inline whites for variables (see Section 2): the `.quote-card` background/border
+  (line ~255) and the quote avatar border (line ~264). Both render identically in light mode.
 
 ### 3. Toggle button (navbar)
 
