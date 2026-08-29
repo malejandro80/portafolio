@@ -22,11 +22,26 @@
   <meta charset="utf-8" />
   <script>
     (function () {
+      var lightCSS = ':root{--bg:#f8fafc;--surface:#fff;--surface-muted:#f1f5f9;--text:#0f172a;--muted:#64748b;--accent-primary:#046bd2;--accent-secondary:#26b7cd;--accent-gradient:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));--border:#e2e8f0;--bg-primary:var(--bg);--text-primary:var(--text);--text-secondary:var(--text);--text-muted:var(--muted);--accent-color:var(--accent-primary);--gradient-glow:var(--accent-secondary);--logo:var(--accent-primary);--nav:var(--muted);--chrome-bg:rgba(255,255,255,0.85);--shadow-card:0 20px 40px -15px rgba(15,23,42,0.08);--shadow-hover:0 30px 60px -15px rgba(4,107,210,0.12);--bg-dark:var(--bg);--bg-surface:var(--surface);--bg-surface-hover:var(--surface-muted);--text-main:var(--text);--text-muted:var(--muted);--glass-border:1px solid var(--border);--glass-border-darker:1px solid var(--border);--glass-shadow:var(--shadow-card)}';
+      var darkCSS = ':root{--bg:#0f172a;--surface:#1e293b;--surface-muted:#334155;--text:#f1f5f9;--muted:#94a3b8;--accent-primary:#3b82f6;--accent-secondary:#22d3ee;--accent-gradient:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));--border:#334155;--bg-primary:var(--bg);--text-primary:var(--text);--text-secondary:var(--text);--text-muted:var(--muted);--accent-color:var(--accent-primary);--gradient-glow:var(--accent-secondary);--logo:var(--accent-primary);--nav:var(--muted);--chrome-bg:rgba(15,23,42,0.85);--shadow-card:0 20px 40px -15px rgba(0,0,0,0.3);--shadow-hover:0 30px 60px -15px rgba(59,130,246,0.2);--bg-dark:var(--bg);--bg-surface:var(--surface);--bg-surface-hover:var(--surface-muted);--text-main:var(--text);--text-muted:var(--muted);--glass-border:1px solid var(--border);--glass-border-darker:1px solid var(--border);--glass-shadow:var(--shadow-card)}';
+
+      var lightEl = document.createElement('style');
+      lightEl.id = 'theme-light';
+      lightEl.textContent = lightCSS;
+      document.head.appendChild(lightEl);
+
+      var darkEl = document.createElement('style');
+      darkEl.id = 'theme-dark';
+      darkEl.textContent = darkCSS;
+      darkEl.disabled = true;
+      document.head.appendChild(darkEl);
+
       var t;
       try { t = localStorage.getItem('theme'); } catch (e) { t = null; }
       if (t !== 'dark' && t !== 'light') t = null;
       if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       document.documentElement.dataset.theme = t;
+      if (t === 'dark') { lightEl.disabled = true; darkEl.disabled = false; }
       var meta = document.querySelector('meta[name="theme-color"]');
       if (meta) meta.content = t === 'dark' ? '#0f172a' : '#f8fafc';
     })();
@@ -81,6 +96,11 @@
   <link href="img/dev.ico" rel="icon" />
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet" />
+
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -110,42 +130,17 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ8M3STF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <!--/ Nav Star /-->
-  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll" href="#page-top">Portfolio</a>
-      <!-- <button
-          class="navbar-toggler collapsed"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarDefault"
-          aria-controls="navbarDefault"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button> -->
+  <header class="site-header fixed-top" id="mainNav">
+    <div class="chrome bar-inner">
+      <a class="site-title js-scroll" href="#page-top">Portfolio</a>
       <div class="header-right">
-        <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link js-scroll active" href="#home" id="inicio">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll" href="#about" id="sobre_mi">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll" href="#service" id="servicios">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll" href="#work" id="portafolio">Experience & Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll" href="#contact" id="contacto">Contact Me</a>
-            </li>
-          </ul>
-        </div>
+        <nav aria-label="Navegación principal">
+          <a class="nav-link js-scroll active" href="#home" id="inicio">Home</a>
+          <a class="nav-link js-scroll" href="#about" id="sobre_mi">About Me</a>
+          <a class="nav-link js-scroll" href="#service" id="servicios">Services</a>
+          <a class="nav-link js-scroll" href="#work" id="portafolio">Experience & Portfolio</a>
+          <a class="nav-link js-scroll" href="#contact" id="contacto">Contact Me</a>
+        </nav>
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
           <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -166,10 +161,9 @@
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
-        <!-- Material checked -->
       </div>
     </div>
-  </nav>
+  </header>
   <!--/ Nav End /-->
 
   <!--/ Intro Skew Star /-->
@@ -788,6 +782,26 @@
     </div>
   </section>
   <!--/ Section Contact-footer End /-->
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="chrome footer-inner">
+      <div class="footer-brand">
+        <a href="#page-top" class="site-title">Miguel Bastidas</a>
+        <p>Full Stack Developer & Tech Lead. Building high-performance, scalable web and mobile solutions.</p>
+      </div>
+      <nav aria-label="Pie de página">
+        <a href="#home" class="nav-link js-scroll">Home</a>
+        <a href="#about" class="nav-link js-scroll">About</a>
+        <a href="#service" class="nav-link js-scroll">Services</a>
+        <a href="#work" class="nav-link js-scroll">Portfolio</a>
+        <a href="#contact" class="nav-link js-scroll">Contact</a>
+      </nav>
+    </div>
+    <div class="chrome footer-copy">
+      <p>© 2026 Miguel Bastidas</p>
+    </div>
+  </footer>
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <div id="preloader"></div>

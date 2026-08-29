@@ -199,6 +199,12 @@
 
   function setTheme(theme) {
     document.documentElement.dataset.theme = theme;
+    var light = document.getElementById('theme-light');
+    var dark = document.getElementById('theme-dark');
+    if (light && dark) {
+      if (theme === 'dark') { light.disabled = true; dark.disabled = false; }
+      else { light.disabled = false; dark.disabled = true; }
+    }
     try { localStorage.setItem('theme', theme); } catch (e) {}
     var meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.content = theme === 'dark' ? '#0f172a' : '#f8fafc';
