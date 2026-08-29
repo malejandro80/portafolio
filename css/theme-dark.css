@@ -1,0 +1,84 @@
+/**
+ * Dark theme — palette matches thoughtsBlog.
+ * Scoped under [data-theme="dark"], set on <html> by an inline head script in index.html.
+ *
+ * @format
+ */
+
+[data-theme="dark"] {
+  --bg-dark: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-surface-hover: #334155;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --accent-primary: #3b82f6;
+  --accent-secondary: #22d3ee;
+  --accent-gradient: linear-gradient(
+    135deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
+  --glass-border: 1px solid rgba(255, 255, 255, 0.06);
+  --glass-border-darker: 1px solid rgba(0, 0, 0, 0.45);
+  --glass-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.45);
+}
+
+/* Background grid (premium.css uses hardcoded rgba) */
+[data-theme="dark"] body::before {
+  background-image:
+    linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+}
+
+/* Glassmorphism navbar (premium.css uses !important) */
+[data-theme="dark"] .navbar-b {
+  background: rgba(15, 23, 42, 0.85) !important;
+  border-bottom: var(--glass-border-darker);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+[data-theme="dark"] .navbar-b.navbar-reduce {
+  background: rgba(15, 23, 42, 0.9) !important;
+}
+
+/* Glass cards (premium.css uses !important) */
+[data-theme="dark"] .box-shadow-full,
+[data-theme="dark"] .service-box,
+[data-theme="dark"] .work-box {
+  background: rgba(30, 41, 59, 0.85) !important;
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+[data-theme="dark"] .box-shadow-full:hover,
+[data-theme="dark"] .service-box:hover,
+[data-theme="dark"] .work-box:hover {
+  background: rgba(30, 41, 59, 0.96) !important;
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5);
+}
+
+/* About image border/shadow */
+[data-theme="dark"] .about-img img {
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Work placeholder shimmer */
+[data-theme="dark"] .work-img[style*='min-height']::after {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+}
+
+/* Custom scrollbar */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border: 3px solid var(--bg-dark);
+}
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
