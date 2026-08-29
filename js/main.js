@@ -186,3 +186,30 @@
     $('.use_tech').text(languaje.use_tech);
   }
 })(jQuery);
+
+/* Dark mode toggle */
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+
+  function updateButton(theme) {
+    btn.setAttribute('aria-pressed', theme === 'dark');
+    btn.classList.toggle('is-dark', theme === 'dark');
+  }
+
+  function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    try { localStorage.setItem('theme', theme); } catch (e) {}
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = theme === 'dark' ? '#0f172a' : '#f8fafc';
+    updateButton(theme);
+  }
+
+  var current = document.documentElement.dataset.theme || 'light';
+  updateButton(current);
+
+  btn.addEventListener('click', function () {
+    var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    setTheme(next);
+  });
+})();

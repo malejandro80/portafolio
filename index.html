@@ -15,6 +15,17 @@
   </script>
 
   <meta charset="utf-8" />
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem('theme'); } catch (e) { t = null; }
+      if (t !== 'dark' && t !== 'light') t = null;
+      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = t;
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.content = t === 'dark' ? '#0f172a' : '#f8fafc';
+    })();
+  </script>
   <title>Miguel Bastidas | Full Stack Developer &amp; Tech Lead</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta name="description"
@@ -23,7 +34,7 @@
     content="Miguel Bastidas, Full Stack Developer, Tech Lead, Software Developer, React, Angular, Node.js, Next.js, NestJS, Laravel, AWS, Azure, Portfolio" />
   <meta name="author" content="Miguel Bastidas" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#046bd2" />
+  <meta name="theme-color" content="#f8fafc" />
   <link rel="canonical" href="https://malejandro80.github.io/portafolio/" />
 
   <!-- Open Graph -->
@@ -79,6 +90,7 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet" />
   <link href="css/premium.css" rel="stylesheet" />
+  <link href="css/theme-dark.css" rel="stylesheet" />
 
   <!-- =======================================================
     Theme Name: DevFolio
@@ -106,24 +118,48 @@
           <span></span>
           <span></span>
         </button> -->
-      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll active" href="#home" id="inicio">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#about" id="sobre_mi">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#service" id="servicios">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#work" id="portafolio">Experience & Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#contact" id="contacto">Contact Me</a>
-          </li>
-        </ul>
+      <div class="header-right">
+        <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link js-scroll active" href="#home" id="inicio">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#about" id="sobre_mi">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#service" id="servicios">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#work" id="portafolio">Experience & Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#contact" id="contacto">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Toggle theme"
+          aria-pressed="false"
+        >
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
         <!-- Material checked -->
       </div>
     </div>
@@ -252,7 +288,7 @@
       <div class="row justify-content-center">
         <div class="col-md-10">
           <div class="quote-card box-shadow-full d-flex flex-column flex-md-row text-center text-md-left"
-            style="background: rgba(255,255,255,0.95) !important; align-items: center; gap: 50px; padding: 60px; border-radius: 40px; position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.5);">
+            style="align-items: center; gap: 50px; padding: 60px; border-radius: 40px; position: relative; overflow: hidden;">
             <!-- Decorative quote icon -->
             <span
               style="position: absolute; top: -20px; right: 20px; font-size: 14rem; color: rgba(4,107,210,0.03); font-family: Georgia, serif; line-height: 1;">&rdquo;</span>
@@ -261,7 +297,7 @@
               <div
                 style="width: 200px; height: 200px; border-radius: 50%; padding: 6px; background: var(--accent-gradient); box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
                 <img src="img/1.png" alt="Miguel Bastidas"
-                  style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 6px solid #fff;" />
+                  style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 6px solid var(--bg-surface);" />
               </div>
             </div>
 

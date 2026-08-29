@@ -223,9 +223,25 @@ git commit -m "feat: add theme loader, dark css link, and variable-driven inline
 **Files:**
 - Modify: `index.html`
 
-- [ ] **Step 1: Insert the toggle button after the nav `</ul>`**
+- [ ] **Step 1: Put the toggle in an always-visible `header-right` wrapper (like the blog)**
 
-In the `#navbarDefault` collapse div, immediately after the closing `</ul>` (line ~126, after `<!-- Material checked -->`), insert:
+Mirror the blog's `Header.astro`: wrap the existing `#navbarDefault` collapse div and the new toggle button in a
+`header-right` flex div, as a direct child of `nav .container`. The button goes AFTER the collapse div (not inside
+it) so it stays visible on every viewport — the portfolio navbar has its toggler commented out, so a button inside
+the collapse would be unreachable on mobile.
+
+Resulting navbar container structure:
+
+```html
+<div class="header-right">
+  <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+    <ul class="navbar-nav">...</ul>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" ...>...</button>
+</div>
+```
+
+Insert the button markup between the collapse `</div>` and the closing `</div>` of `header-right`:
 
 ```html
       <button
@@ -254,8 +270,9 @@ In the `#navbarDefault` collapse div, immediately after the closing `</ul>` (lin
 
 - [ ] **Step 2: Verify placement**
 
-Run: `rg -n "theme-toggle|Material checked" index.html`
-Expected: two `theme-toggle` matches (the button `class` and its `id`), inserted immediately after the closing `</ul>` and before the `Material checked` comment.
+Run: `rg -n "theme-toggle|header-right" index.html`
+Expected: two `theme-toggle` matches (the button `class` and its `id`), plus one `header-right` wrapper div
+containing both the `#navbarDefault` collapse and the button — button NOT inside the collapse.
 
 - [ ] **Step 3: Commit**
 
@@ -277,6 +294,11 @@ Append the following block to the end of `css/premium.css`:
 
 ```css
 /* Theme toggle button (both themes) */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
 .theme-toggle {
   display: flex;
   align-items: center;
@@ -284,7 +306,6 @@ Append the following block to the end of `css/premium.css`:
   width: 2.25rem;
   height: 2.25rem;
   padding: 0;
-  margin-left: 1.25rem;
   background: var(--bg-surface-hover);
   border: 1px solid var(--glass-border-darker);
   border-radius: 999px;
