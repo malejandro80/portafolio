@@ -754,6 +754,138 @@ html body .site-footer {
   box-sizing: border-box !important;
 }
 
+/* Popular Posts Section Styling */
+html body .card-blog {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-card) !important;
+  overflow: hidden !important;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease) !important;
+  margin-bottom: 2rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: calc(100% - 2rem) !important;
+}
+
+html body .card-blog:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: var(--shadow-hover) !important;
+  border-color: var(--accent-primary) !important;
+}
+
+html body .card-blog .card-img {
+  position: relative !important;
+  overflow: hidden !important;
+  aspect-ratio: 16 / 9 !important;
+  background: var(--surface-muted) !important;
+}
+
+html body .card-blog .card-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.5s var(--ease) !important;
+}
+
+html body .card-blog:hover .card-img img {
+  transform: scale(1.06) !important;
+}
+
+html body .card-blog .card-body {
+  padding: 1.5rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+}
+
+html body .card-blog .card-category-box {
+  margin-bottom: 0.75rem !important;
+}
+
+html body .card-blog .card-category .category {
+  display: inline-block !important;
+  padding: 0.35em 0.85em !important;
+  font-family: var(--font-chrome) !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  border-radius: var(--radius-pill) !important;
+  background: rgba(4, 107, 210, 0.08) !important;
+  color: var(--accent-primary) !important;
+  border: 1px solid rgba(4, 107, 210, 0.15) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+[data-theme="dark"] html body .card-blog .card-category .category {
+  background: rgba(59, 130, 246, 0.15) !important;
+  color: var(--accent-secondary) !important;
+  border-color: rgba(59, 130, 246, 0.25) !important;
+}
+
+html body .card-blog .card-title {
+  font-family: var(--font-heading) !important;
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  line-height: 1.4 !important;
+  margin-bottom: 0.65rem !important;
+}
+
+html body .card-blog .card-title a {
+  color: var(--text) !important;
+  text-decoration: none !important;
+  transition: color 0.2s var(--ease) !important;
+}
+
+html body .card-blog .card-title a:hover {
+  color: var(--accent-primary) !important;
+}
+
+html body .card-blog .card-description {
+  font-family: var(--font-body) !important;
+  color: var(--muted) !important;
+  font-size: 0.875rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1rem !important;
+  flex: 1 !important;
+}
+
+html body .card-blog .card-footer {
+  padding: 1rem 1.5rem !important;
+  background: var(--surface-muted) !important;
+  border-top: 1px solid var(--border) !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  font-size: 0.775rem !important;
+  color: var(--muted) !important;
+  font-family: var(--font-chrome) !important;
+}
+
+html body .btn-see-all-posts {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  font-family: var(--font-heading) !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  padding: 0.85em 2.2em !important;
+  border-radius: var(--radius-pill) !important;
+  background: var(--accent-gradient) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 10px 30px -5px rgba(4, 107, 210, 0.35) !important;
+  text-decoration: none !important;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease) !important;
+}
+
+html body .btn-see-all-posts:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 15px 40px -5px rgba(4, 107, 210, 0.5) !important;
+  color: #ffffff !important;
+}
+
 html body .site-footer::before {
   content: '' !important;
   position: absolute !important;

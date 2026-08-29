@@ -99,7 +99,9 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Outfit:wght@600;700;800;900&display=swap"
+    rel="stylesheet" />
 
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -127,7 +129,8 @@
 
 <body id="page-top">
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ8M3STF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ8M3STF" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <!--/ Nav Star /-->
   <header class="site-header fixed-top" id="mainNav">
@@ -139,6 +142,7 @@
           <a class="nav-link js-scroll" href="#about" id="sobre_mi">About Me</a>
           <a class="nav-link js-scroll" href="#service" id="servicios">Services</a>
           <a class="nav-link js-scroll" href="#work" id="portafolio">Experience & Portfolio</a>
+          <a class="nav-link js-scroll" href="#blog" id="nav-blog">Blog</a>
           <a class="nav-link js-scroll" href="#contact" id="contacto">Contact Me</a>
         </nav>
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
@@ -180,7 +184,8 @@
           </p>
           <p class="pt-3">
             <a class="btn btn-outline-accent px-4 ml-2" href="curriculo-miguel-e-2026.pdf" target="_blank" role="button"
-              onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({event: 'cv_download'});">Download CV</a>
+              onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({event: 'cv_download'});">Download
+              CV</a>
             <a onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'"
               class="btn btn-primary btn px-4"
               style="background: var(--accent-gradient); border: none; padding: 12px 30px; border-radius: 30px; font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; box-shadow: 0 5px 15px rgba(4,107,210,0.3); transition: transform 0.3s ease;"
@@ -701,39 +706,136 @@
             </a>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="work-box">
-            <a href="img/viajando.jpg" data-lightbox="gallery-mf">
-              <div class="work-img">
-                <img src="img/viajando.jpg" alt="VIA/JANDO - travel and tourism landing page project"
-                  class="img-fluid" />
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h2 class="w-title">VIA/JANDO</h2>
-                    <p class="s-description text-left"
-                      style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">
-                      Created a visually engaging and fully responsive travel and tourism landing page. Leveraged
-                      Bootstrap and custom CSS to deliver a seamless user experience across all devices.
-                    </p>
-                    <p class="use_tech">Tech I used here:</p>
-                    <ul>
-                      <li>HTML</li>
-                      <li>CSS</li>
-                      <li>Bootstrap</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </a>
+
+        </a>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <!--/ Section Portfolio End /-->
+
+  <!--/ Section Popular Posts Start /-->
+  <section id="blog" class="sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">Popular Posts</h3>
+            <p class="subtitle-a">
+              Reflexiones, arquitectura de software e ideas sobre liderazgo técnico.
+            </p>
+            <div class="line-mf"></div>
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="../thoughtsBlog/dist/blog/sobre-poder-y-gobernanza/index.html" target="_blank"
+                rel="noopener noreferrer">
+                <img src="img/blog_governance.png" alt="Reflexiones de café: sobre la gestión y la gobernanza"
+                  class="img-fluid" />
+              </a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <span class="card-category"><span class="category">Gestión &amp; Liderazgo</span></span>
+              </div>
+              <h3 class="card-title">
+                <a href="../thoughtsBlog/dist/blog/sobre-poder-y-gobernanza/index.html" target="_blank"
+                  rel="noopener noreferrer">Reflexiones de café: sobre la gestión y la gobernanza</a>
+              </h3>
+              <p class="card-description">
+                Un análisis sobre las dinámicas de grupos, gestionar comunidades y la diferencia entre criticar desde
+                afuera y asumir la responsabilidad.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <span class="author">Miguel Bastidas</span>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 25 Ago, 2026
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="../thoughtsBlog/dist/blog/index.html" target="_blank" rel="noopener noreferrer">
+                <img src="img/blog_architecture.png" alt="Arquitectura de Software Escalable en Proyectos Modernos"
+                  class="img-fluid" />
+              </a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <span class="card-category"><span class="category">Arquitectura</span></span>
+              </div>
+              <h3 class="card-title">
+                <a href="../thoughtsBlog/dist/blog/index.html" target="_blank" rel="noopener noreferrer">Arquitectura de
+                  Software Escalable en Proyectos Modernos</a>
+              </h3>
+              <p class="card-description">
+                Principios fundamentales para diseñar sistemas desacoplados, mantenibles y preparados para alta
+                concurrencia en la nube.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <span class="author">Miguel Bastidas</span>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 18 Ago, 2026
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="../thoughtsBlog/dist/blog/index.html" target="_blank" rel="noopener noreferrer">
+                <img src="img/blog_leadership.png" alt="El Rol del Tech Lead: Más allá de escribir código"
+                  class="img-fluid" />
+              </a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <span class="card-category"><span class="category">Tech Lead</span></span>
+              </div>
+              <h3 class="card-title">
+                <a href="../thoughtsBlog/dist/blog/index.html" target="_blank" rel="noopener noreferrer">El Rol del Tech
+                  Lead: Más allá de escribir código</a>
+              </h3>
+              <p class="card-description">
+                Estrategias clave para guiar ingenieros, balancear deuda técnica con valor de negocio y cultivar una
+                cultura de excelencia.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <span class="author">Miguel Bastidas</span>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 10 Ago, 2026
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4 pt-3">
+        <div class="col-12 text-center">
+          <a href="../thoughtsBlog/dist/blog/index.html" target="_blank" rel="noopener noreferrer"
+            class="btn btn-see-all-posts">
+            Ver todas las publicaciones <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
       </div>
     </div>
   </section>
-
-  <!--/ Section Portfolio End /-->
+  <!--/ Section Popular Posts End /-->
 
   <!--/ Section Contact-Footer Star /-->
   <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
@@ -748,32 +850,29 @@
                   <div class="title-box-2 pt-4 pt-md-0">
                     <h5 class="title-left" id="encuentrame">Contact Me</h5>
                   </div>
+                  <p class="lead">
+                    Whether you have a question, a project idea, or just want to connect, feel free to reach out. I'm
+                    always open to discussing new opportunities and technology.
+                  </p>
                   <div class="more-info">
-                    <p class="lead" id="encuentrame_msj">
-                      Follow me on my social media or write to me to find out
-                      more, I will be happy to answer you.
-                    </p>
+                    <ul class="list-ico">
+
+                      <li><span class="ion-email"></span> m.alejandrobp.80@gmail.com</li>
+                    </ul>
                   </div>
                   <div class="socials">
                     <ul>
-                      <li>
-                        <a href="https://www.linkedin.com/in/miguelintech/" target="_blank" aria-label="LinkedIn">
-                          <span class="ico-circle"><i class="fa-brands fa-linkedin-in"></i></span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.instagram.com/miguelabp18/" target="_blank" aria-label="Instagram">
-                          <span class="ico-circle"><i class="fa-brands fa-instagram"></i></span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/malejandro80" target="_blank" aria-label="GitHub">
-                          <span class="ico-circle"><i class="fa-brands fa-github"></i></span>
-                        </a>
-                      </li>
+                      <li><a href="https://github.com/malejandro80" target="_blank" aria-label="GitHub Profile"><span
+                            class="ico-circle"><i class="ion-social-github"></i></span></a></li>
+                      <li><a href="https://linkedin.com/in/miguelbastidasdev" target="_blank"
+                          aria-label="LinkedIn Profile"><span class="ico-circle"><i
+                              class="ion-social-linkedin"></i></span></a></li>
+                      <li><a href="mailto:miguelbastidasdev@gmail.com" aria-label="Send Email"><span
+                            class="ico-circle"><i class="ion-email"></i></span></a></li>
                     </ul>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -795,6 +894,7 @@
         <a href="#about" class="nav-link js-scroll">About</a>
         <a href="#service" class="nav-link js-scroll">Services</a>
         <a href="#work" class="nav-link js-scroll">Portfolio</a>
+        <a href="#blog" class="nav-link js-scroll">Blog</a>
         <a href="#contact" class="nav-link js-scroll">Contact</a>
       </nav>
     </div>
