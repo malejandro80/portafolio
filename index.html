@@ -4,14 +4,20 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGW994MSKT"></script>
+  <!-- Google Tag Manager -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XGW994MSKT');
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MQ8M3STF');
   </script>
+  <!-- End Google Tag Manager -->
 
   <meta charset="utf-8" />
   <script>
@@ -122,6 +128,10 @@
 </head>
 
 <body id="page-top">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ8M3STF" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!--/ Nav Star /-->
   <header class="site-header fixed-top" id="mainNav">
@@ -175,7 +185,7 @@
           </p>
           <p class="pt-3">
             <a class="btn btn-outline-accent px-4 ml-2" href="curriculo-miguel-e-2026.pdf" target="_blank" role="button"
-              onclick="window.gtag = window.gtag || function(){(window.dataLayer = window.dataLayer || []).push(arguments);}; gtag('event', 'cv_download');">Download
+              onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({event: 'cv_download'});">Download
               CV</a>
             <a onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'"
               class="btn btn-primary btn px-4"
